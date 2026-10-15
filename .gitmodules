@@ -1,0 +1,6 @@
+[submodule "external/mss-alt"]
+	path = external/mss-alt
+	url = git@github.com:clairesb/mss-alt.git
+[submodule "external/lyricwhiz"]
+	path = external/lyricwhiz
+	url = git@github.com:clairesb/LyricWhiz.git
