@@ -15,7 +15,11 @@ if [[ -z "$MODULE_PATH" || -z "$MSG" ]]; then
   exit 1
 fi
 
-ROOT="$(git rev-parse --show-toplevel)"
+ROOT="$(git rev-parse --show-superproject-working-tree)"
+# Will run from inside a submodule!
+if [[ -z "$ROOT" ]]; then
+  ROOT="$(git rev-parse --show-toplevel)"
+fi
 cd "$ROOT"
 SUB="${MODULE_PATH%/}"
 
