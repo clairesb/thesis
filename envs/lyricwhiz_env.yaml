@@ -1,0 +1,9 @@
+name: lyricwhiz 
+dependencies: 
+    - pip
+    - pip: 
+        - tqdm
+        - librosa
+        - numpy
+        - whisper
+        - panns_inference
