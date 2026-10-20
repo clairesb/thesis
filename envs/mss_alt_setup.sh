@@ -12,3 +12,6 @@ export OUTPUT_DIR="$REPO_PATH/outputs"
 mkdir -p "$DATA_ROOT" "$OUTPUT_DIR"
 
 pixi run -e dev pre-commit install
+
+echo "Current directory: $(pwd)"
+ls -d "$DATA_ROOT" "$OUTPUT_DIR"
