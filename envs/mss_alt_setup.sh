@@ -1,17 +1,14 @@
 #!/bin/bash
-
 set -euo pipefail
-REPO_PATH="${1}"
 
-cd $REPO_PATH
+REPO_PATH="${1:?Usage: $0 /path/to/repo}"
+
+cd "$REPO_PATH"
 export PIXI_FROZEN=true
-pixi install
-pixi shell
+pixi install -e dev
+
 export DATA_ROOT="$REPO_PATH/audio"
 export OUTPUT_DIR="$REPO_PATH/outputs"
 mkdir -p "$DATA_ROOT" "$OUTPUT_DIR"
 
-pixi run pre-commit install
-
-echo "Current directory: "
-pwd
+pixi run -e dev pre-commit install
