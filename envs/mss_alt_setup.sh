@@ -2,6 +2,7 @@
 set -euo pipefail
 
 REPO_PATH="${1:?Usage: $0 /path/to/repo}"
+REPO_PATH="${REPO_PATH%/}"
 
 cd "$REPO_PATH"
 export PIXI_FROZEN=true
