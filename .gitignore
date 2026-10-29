@@ -223,3 +223,6 @@ results/
 log/
 *.pt
 .env
+
+/miniforge3/*
+Miniforge3-Linux-x86_64.sh
