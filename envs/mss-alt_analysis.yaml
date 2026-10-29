@@ -1,0 +1,12 @@
+name: alt-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10,<3.11
+  - pandas
+  - matplotlib
+  - seaborn
+  - numpy
+  - ipykernel>=6.29.5,<7
+  - ipywidgets
+  - tqdm
