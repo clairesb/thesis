@@ -44,3 +44,13 @@ Attempting to rerun `mss-alt` experiments on the CPU node of the cluster; the GP
         - Compute WER for dataset(s) using Jam-ALT library
             - Re-compute WER for `mss-alt` with this library instead of code adapted therefrom, which is what the repo currently has?
 - Proof of concept: if one were to slot RMS-vad segmentation into the LyricWhiz pipeline for ~10 songs, would the resultant transcripts be any better? How much slower would inference be?
+
+## Phase 2 Part 2: Initial Metrics
+### Current Status
+Successfully replicated mss-alt's inference pipeline on the vancouver research cluster's multigpu partition; the entire pipeline took ~6 hours, just as it did for the original authors. I only reran the pipeline at the song-level (not at the line level) and did so for both the JAM-ALT and MUSDB-ALT datasets, using whisper's native segmentation algorithm and RMS-VAD. 
+
+### Next Steps:
+This list is not exhaustive.
+- Set up local LLM for LyricWhiz benchmarking
+- LLM-correction on top of mss-alt pipeline
+- specify experiments via yaml file (changes to ss-infer)
