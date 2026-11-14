@@ -1,0 +1,11 @@
+fields:
+  song: ['song', 'uid']
+  dataset: ['song', 'dataset_id']
+  language: ['song', 'language']
+  wer: ['eval', 'metrics', 'WER']
+  hits: ['eval', 'metrics', 'hits']
+  sub_rate: ['eval', 'metrics', 'sub_rate']
+  del_rate: ['eval', 'metrics', 'del_rate']
+  ins_rate: ['eval', 'metrics', 'ins_rate']
+  ref: ['song', 'text']
+  hyp: ['infer', 'asr_samples', 0, 'hyp']
